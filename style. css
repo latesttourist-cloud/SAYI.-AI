@@ -24,3 +24,19 @@ cursor:pointer;
 button:hover{
 background:#1565c0;
 }
+.hero{
+    margin-top:40px;
+}
+
+.hero input{
+    width:80%;
+    max-width:500px;
+    padding:15px;
+    border-radius:10px;
+    border:none;
+    font-size:18px;
+}
+
+.hero button{
+    margin:10px;
+}
