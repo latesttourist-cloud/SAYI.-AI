@@ -1,0 +1,19 @@
+function chat(){
+alert("AI Chat Coming Soon");
+}
+
+function image(){
+alert("AI Image Generator Coming Soon");
+}
+
+function video(){
+alert("AI Video Generator Coming Soon");
+}
+
+function photo(){
+alert("Photo Editor Coming Soon");
+}
+
+function editvideo(){
+alert("Video Editor Coming Soon");
+}
