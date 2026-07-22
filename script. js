@@ -1,19 +1,33 @@
-function chat(){
-alert("AI Chat Coming Soon");
+function chat() {
+    alert("🚀 AI Chat is coming soon!");
 }
 
-function image(){
-alert("AI Image Generator Coming Soon");
+function image() {
+    let prompt = document.getElementById("prompt").value;
+
+    if(prompt==""){
+        alert("Please enter a prompt.");
+        return;
+    }
+
+    alert("Generating AI Image for:\n\n" + prompt);
 }
 
-function video(){
-alert("AI Video Generator Coming Soon");
+function video() {
+    let prompt = document.getElementById("prompt").value;
+
+    if(prompt==""){
+        alert("Please enter a prompt.");
+        return;
+    }
+
+    alert("Generating AI Video for:\n\n" + prompt);
 }
 
-function photo(){
-alert("Photo Editor Coming Soon");
+function photo() {
+    alert("Photo Editor coming soon.");
 }
 
-function editvideo(){
-alert("Video Editor Coming Soon");
+function editvideo() {
+    alert("Video Editor coming soon.");
 }
