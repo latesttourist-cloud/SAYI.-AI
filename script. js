@@ -10,9 +10,9 @@ function image() {
         return;
     }
 
-    alert("Generating AI Image for:\n\n" + prompt);
+    document.getElementById("result").innerHTML =
+    "<h3>Generating...</h3><p>Prompt: " + prompt + "</p>";
 }
-
 function video() {
     let prompt = document.getElementById("prompt").value;
 
