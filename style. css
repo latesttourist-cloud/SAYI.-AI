@@ -40,3 +40,18 @@ background:#1565c0;
 .hero button{
     margin:10px;
 }
+#result{
+    width:90%;
+    max-width:700px;
+    margin:30px auto;
+    padding:20px;
+    background:white;
+    color:black;
+    border-radius:15px;
+    text-align:center;
+}
+
+#result img{
+    width:100%;
+    border-radius:10px;
+}
