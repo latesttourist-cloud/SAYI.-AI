@@ -2,16 +2,40 @@ function chat() {
     alert("🚀 AI Chat is coming soon!");
 }
 
-function image() {
-    let prompt = document.getElementById("prompt").value;
+async function image() {
+  const prompt = document.getElementById("prompt").value;
 
-    if(prompt==""){
-        alert("Please enter a prompt.");
-        return;
+  if (!prompt) {
+    alert("Please enter a prompt.");
+    return;
+  }
+
+  const result = document.getElementById("result");
+  result.innerHTML = "<h3>⏳ Generating image...</h3>";
+
+  try {
+    const response = await fetch("/api/generate", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ prompt }),
+    });
+
+    if (!response.ok) {
+      throw new Error("Failed to generate image");
     }
 
-    document.getElementById("result").innerHTML =
-    "<h3>Generating...</h3><p>Prompt: " + prompt + "</p>";
+    const blob = await response.blob();
+    const imageUrl = URL.createObjectURL(blob);
+
+    result.innerHTML = `
+      <h3>✅ AI Generated Image</h3>
+      <img src="${imageUrl}" alt="AI Image">
+    `;
+  } catch (error) {
+    result.innerHTML = `<p style="color:red;">${error.message}</p>`;
+  }
 }
 function video() {
     let prompt = document.getElementById("prompt").value;
