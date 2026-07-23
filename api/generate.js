@@ -24,10 +24,12 @@ export default async function handler(req, res) {
   );
 
   if (!response.ok) {
-    return res.status(response.status).json({
-      error: "Image generation failed",
-    });
-  }
+  const error = await response.text();
+
+  return res.status(response.status).json({
+    error: error,
+  });
+}
 
   const imageBuffer = await response.arrayBuffer();
 
